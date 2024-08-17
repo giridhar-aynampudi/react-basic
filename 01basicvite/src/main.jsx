@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 
@@ -20,6 +22,16 @@ function MyApp() {
 const AnotherElement = (
     <a href='https://www.google.com' target='_blank'>Vist Google </a>
 )
-createRoot(document.getElementById('root')).render(
-    AnotherElement
+
+const areactElement = React.createElement(
+    'a',
+    {
+        href: 'https://www.reddit.com',
+        target: '_blank'
+    },
+    'Reddit app'
+)
+ReactDOM.createRoot(document.getElementById('root')).render(
+    // areactElement,
+    <App />
 )
