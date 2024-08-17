@@ -1,0 +1,11 @@
+DOM -> intensive, rerender everything -> effects performance, worst in the real world apps
+React DOM -> virtual DOM to mimick, slight change in the node and compare with original DOM -> updates only the change
+To understand the REACT theory -> https://github.com/acdlite/react-fiber-architecture
+Reconciliation -> setState -> is used to update the change
+The reconciler does the work of computing which parts of a tree have changed; the renderer then uses that information to actually update the rendered app.
+
+Scheduler:
+pause work and come back to it later. -> if you want to do A->B and then B->C instead pause and come back can get you A->C
+assign priority to different types of work. -> Prioritise the task
+reuse previously completed work. -> states
+abort work if it's no longer needed. -> intermittent states can be removed
