@@ -9,3 +9,7 @@ pause work and come back to it later. -> if you want to do A->B and then B->C in
 assign priority to different types of work. -> Prioritise the task
 reuse previously completed work. -> states
 abort work if it's no longer needed. -> intermittent states can be removed
+
+
+React router:
+https://reactrouter.com/en/main/start/concepts
