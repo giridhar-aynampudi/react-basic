@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 import './App.css'
 import {TodoProvider} from './contexts';
+import {TodoForm, TodoItem} from './components/index';
 function App() {
 
   const [todos, setTodos] = useState([]);
@@ -37,7 +38,14 @@ function App() {
 
   return (
     <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
-      <h1>Todo</h1>
+      <TodoForm />
+      {
+        todos.map((todo) => (
+          <div key={todo.id}>
+            <TodoItem todo={todo} />
+            </div>
+        ))
+      }
     </TodoProvider>
   );
 }
